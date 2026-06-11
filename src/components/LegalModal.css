@@ -1,0 +1,100 @@
+.legal-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(5, 5, 10, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.legal-modal-content {
+  background-color: var(--color-bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 800px;
+  max-height: 85vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.legal-modal-content .close-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--color-text-muted);
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.legal-modal-content .close-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-text);
+  transform: rotate(90deg);
+}
+
+.legal-modal-body {
+  padding: 3rem;
+  overflow-y: auto;
+}
+
+.legal-title {
+  font-size: 2rem;
+  color: var(--color-text);
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: var(--font-heading);
+}
+
+.legal-text {
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.legal-text h3 {
+  color: var(--color-text);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.legal-text p {
+  margin-bottom: 1.5rem;
+}
+
+.legal-text ul {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.legal-text li {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .legal-modal-body {
+    padding: 2rem;
+  }
+  
+  .legal-title {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,187 @@
+.portfolio-section {
+  background-color: var(--color-bg-secondary);
+  padding: 6rem 0;
+}
+
+.portfolio-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.portfolio-showcase-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  background: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: var(--shadow-card);
+  transition: all 0.4s ease;
+}
+
+.portfolio-showcase-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(138, 43, 226, 0.3);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+.portfolio-showcase-card.reverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+.portfolio-showcase-card.reverse .portfolio-image-section {
+  order: 2;
+}
+
+.portfolio-showcase-card.reverse .portfolio-details-section {
+  order: 1;
+}
+
+.portfolio-image-section {
+  position: relative;
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+/* Premium Placeholder Backgrounds */
+.bg-ai-agent { background: url('/ai_agent_mockup.png') center/cover no-repeat; }
+.bg-ecommerce { background: url('/ecommerce_mockup.png') center/cover no-repeat; }
+.bg-healthcare { background: url('/healthcare_mockup.png') center/cover no-repeat; }
+.bg-logistics { background: url('/logistics_mockup.png') center/cover no-repeat; }
+
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.portfolio-showcase-card:hover .image-overlay {
+  opacity: 1;
+}
+
+.portfolio-details-section {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.portfolio-category {
+  font-size: 0.85rem;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-title {
+  font-size: 2.2rem;
+  margin: 0 0 1rem 0;
+  color: var(--color-text);
+}
+
+.portfolio-overview {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.portfolio-tech-stack {
+  margin-bottom: 2rem;
+}
+
+.tech-title {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  color: var(--color-text);
+}
+
+.portfolio-outcome {
+  background: rgba(138, 43, 226, 0.1);
+  border-left: 3px solid var(--color-primary);
+  padding: 1rem 1.5rem;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.portfolio-outcome i {
+  margin-top: 0.3rem;
+  font-size: 1.2rem;
+}
+
+.outcome-text {
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+.mobile-only-btn {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .portfolio-showcase-card,
+  .portfolio-showcase-card.reverse {
+    grid-template-columns: 1fr;
+  }
+  
+  .portfolio-showcase-card.reverse .portfolio-image-section {
+    order: 1;
+  }
+  
+  .portfolio-showcase-card.reverse .portfolio-details-section {
+    order: 2;
+  }
+  
+  .portfolio-image-section {
+    min-height: 250px;
+  }
+
+  .image-overlay {
+    display: none; /* Hide overlay on mobile since hover is tricky */
+  }
+
+  .mobile-only-btn {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-details-section {
+    padding: 2rem;
+  }
+  
+  .portfolio-title {
+    font-size: 1.8rem;
+  }
+}

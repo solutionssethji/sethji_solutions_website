@@ -1,0 +1,150 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.modal-content {
+  background: var(--color-bg-secondary);
+  border: 1px solid rgba(138, 43, 226, 0.3);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+}
+
+/* Custom Scrollbar for Modal */
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+.modal-content::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.1);
+}
+.modal-content::-webkit-scrollbar-thumb {
+  background: rgba(138, 43, 226, 0.5);
+  border-radius: 10px;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.modal-close-btn:hover {
+  background: var(--color-primary);
+  transform: rotate(90deg);
+}
+
+.modal-header-image {
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.modal-header-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--color-bg-secondary) 0%, rgba(10,10,22,0) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+}
+
+.modal-category {
+  color: var(--color-accent);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.modal-title {
+  font-size: 2.5rem;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.modal-body {
+  padding: 2rem;
+}
+
+.case-study-section {
+  margin-bottom: 2rem;
+}
+
+.case-study-section h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.case-study-section p {
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.case-study-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.case-study-box {
+  background: var(--color-bg-card);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.case-study-box.highlight-box {
+  background: rgba(138, 43, 226, 0.05);
+  border-color: rgba(138, 43, 226, 0.3);
+}
+
+.case-study-box h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    margin: 1rem;
+  }
+  .case-study-grid {
+    grid-template-columns: 1fr;
+  }
+  .modal-title {
+    font-size: 2rem;
+  }
+}

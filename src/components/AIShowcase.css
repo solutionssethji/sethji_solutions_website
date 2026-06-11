@@ -1,0 +1,309 @@
+.ai-showcase-section {
+  background-color: var(--color-bg);
+  padding: 2rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.badge-glow {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background: rgba(138, 43, 226, 0.1);
+  color: var(--color-primary);
+  border: 1px solid rgba(138, 43, 226, 0.3);
+  border-radius: 50px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 20px rgba(138, 43, 226, 0.2);
+}
+
+.ai-showcase-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 3rem;
+  align-items: stretch;
+}
+
+/* Controls Column */
+.ai-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ai-tab {
+  background: var(--color-bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.ai-tab::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: var(--gradient-primary);
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+.ai-tab:hover {
+  border-color: rgba(138, 43, 226, 0.3);
+  background: rgba(138, 43, 226, 0.05);
+}
+
+.ai-tab.active {
+  background: rgba(138, 43, 226, 0.05);
+  border-color: rgba(138, 43, 226, 0.5);
+  box-shadow: var(--shadow-glow);
+}
+
+.ai-tab.active::before {
+  transform: scaleY(1);
+}
+
+.tab-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--color-text-muted);
+  transition: all 0.3s ease;
+}
+
+.ai-tab.active .tab-icon {
+  background: var(--gradient-primary);
+  color: white;
+}
+
+.tab-info h3 {
+  font-size: 1.2rem;
+  color: var(--color-text);
+  margin-bottom: 0.3rem;
+}
+
+.tab-info p {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* Visual Showcase Column */
+.ai-visual-display {
+  display: flex;
+  height: 100%;
+}
+
+.visual-container {
+  width: 100%;
+  background: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(138, 43, 226, 0.3);
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.visual-container::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(138, 43, 226, 0.15) 0%, rgba(10, 10, 22, 0) 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.visual-content {
+  position: relative;
+  z-index: 1;
+}
+
+.visual-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.visual-desc {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+/* Dynamic Animations */
+.visual-animation {
+  height: 200px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Agent Chat Animation */
+.chat-animation {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.chat-bubble {
+  padding: 1rem;
+  border-radius: 15px;
+  max-width: 80%;
+  font-size: 0.9rem;
+  animation: popIn 0.5s ease forwards;
+  opacity: 0;
+}
+
+.chat-bubble.user {
+  background: rgba(255, 255, 255, 0.1);
+  align-self: flex-end;
+  border-bottom-right-radius: 0;
+}
+
+.chat-bubble.ai {
+  background: var(--gradient-primary);
+  align-self: flex-start;
+  border-bottom-left-radius: 0;
+  animation-delay: 1s;
+}
+
+@keyframes popIn {
+  0% { opacity: 0; transform: translateY(10px) scale(0.95); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Voice Waveform Animation */
+.waveform-animation {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 60px;
+}
+
+.waveform-animation .bar {
+  width: 8px;
+  background: var(--color-primary);
+  border-radius: 10px;
+  animation: wave 1s ease-in-out infinite alternate;
+}
+
+.waveform-animation .bar:nth-child(1) { height: 20%; animation-delay: 0.1s; }
+.waveform-animation .bar:nth-child(2) { height: 60%; animation-delay: 0.2s; }
+.waveform-animation .bar:nth-child(3) { height: 100%; animation-delay: 0.3s; }
+.waveform-animation .bar:nth-child(4) { height: 40%; animation-delay: 0.4s; }
+.waveform-animation .bar:nth-child(5) { height: 80%; animation-delay: 0.5s; }
+.waveform-animation .bar:nth-child(6) { height: 30%; animation-delay: 0.6s; }
+
+@keyframes wave {
+  0% { transform: scaleY(0.5); }
+  100% { transform: scaleY(1.2); }
+}
+
+/* Vision Scan Animation */
+.vision-animation {
+  width: 150px;
+  height: 150px;
+  position: relative;
+}
+
+.scan-box {
+  width: 100%;
+  height: 100%;
+  border: 2px dashed rgba(138, 43, 226, 0.5);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.scan-box::before {
+  content: '\f4fd'; /* fa-user-astronaut */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.scan-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--color-primary);
+  box-shadow: 0 0 15px var(--color-primary);
+  animation: scan 2s linear infinite alternate;
+}
+
+@keyframes scan {
+  0% { top: 0; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+@media (max-width: 992px) {
+  .ai-showcase-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .visual-container {
+    padding: 2rem;
+  }
+}
