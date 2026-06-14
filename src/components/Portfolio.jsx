@@ -8,6 +8,69 @@ const Portfolio = () => {
 
   const projects = [
     { 
+      title: "Proofile.in", 
+      category: "Mobile App Development", 
+      overview: "A dedicated mobile application built exclusively for digital profiling and networking, available on the App Store and Google Play Store.",
+      technologies: ["Flutter", "Node.js", "MongoDB"],
+      outcome: "Successfully launched app and scaling user base",
+      imageClass: "bg-proofile",
+      playStoreLink: "https://play.google.com/store/apps/details?id=com.proofile.in",
+      appStoreLink: "https://apps.apple.com/in/app/proofile-in/id1660453396",
+      caseStudyDetails: {
+        challenge: "The client needed a modern, intuitive mobile application solution for seamless digital networking.",
+        solution: "We focused entirely on mobile app development, building a robust cross-platform Flutter app optimized for fast profile sharing.",
+        techUsed: ["Flutter", "Node.js", "Express", "MongoDB"],
+        businessResult: "Successfully launched the mobile app on the App Store and Play Store, receiving positive user feedback for its intuitive design."
+      }
+    },
+    { 
+      title: "Revolve By Preethi", 
+      category: "Mobile App Development", 
+      overview: "A custom mobile application developed exclusively for the 'Revolve By Preethi' brand, available on the App Store and Google Play Store.",
+      technologies: ["Flutter", "Firebase"],
+      outcome: "Enhanced mobile customer engagement",
+      imageClass: "bg-revolve",
+      playStoreLink: "https://play.google.com/store/apps/details?id=com.revolve_by_preethi.app",
+      appStoreLink: "https://apps.apple.com/us/app/revolve-by-preethi/id6751812012",
+      caseStudyDetails: {
+        challenge: "The brand required a dedicated mobile app to improve customer engagement and provide a streamlined shopping experience on phones.",
+        solution: "We handled the complete mobile app development lifecycle, building a robust Flutter app that offers a seamless and responsive native experience.",
+        techUsed: ["Flutter", "Firebase", "Stripe"],
+        businessResult: "Successfully launched their dedicated mobile app, increasing mobile conversions and providing a direct marketing channel."
+      }
+    },
+    { 
+      title: "VGMart LLP", 
+      category: "Website Development", 
+      overview: "A custom, scalable e-commerce website designed and developed exclusively for VGMart LLP to provide a seamless web shopping experience.",
+      technologies: ["React", "Next.js", "Tailwind CSS"],
+      outcome: "Launched high-performance website and expanded sales",
+      imageClass: "bg-vgmart",
+      link: "https://vgmartllp.in/",
+      caseStudyDetails: {
+        challenge: "VGMart LLP needed a modern, high-performance website to establish their online retail presence.",
+        solution: "We focused entirely on custom website development, building a responsive and fast-loading web platform optimized for secure transactions.",
+        techUsed: ["React", "Next.js", "Node.js", "PostgreSQL"],
+        businessResult: "Successfully launched their new e-commerce website, leading to a broader customer reach and increased online sales."
+      }
+    },
+    { 
+      title: "Delyte", 
+      category: "Enterprise Mobile App", 
+      overview: "A comprehensive internal employee management application currently available in Closed Testing and TestFlight.",
+      technologies: ["Flutter", "Node.js", "Firebase"],
+      outcome: "Launched in Closed Testing & TestFlight",
+      imageClass: "bg-delyte",
+      playStoreLink: "#",
+      appStoreLink: "#",
+      caseStudyDetails: {
+        challenge: "The organization needed a centralized mobile solution to manage employee onboarding, leave requests, and internal communications effectively.",
+        solution: "We built a secure, scalable internal employee application that unifies all HR operations into a single intuitive interface.",
+        techUsed: ["Flutter", "Node.js", "Express", "Firebase"],
+        businessResult: "Successfully launched the application in Closed Testing and TestFlight, currently receiving feedback from initial users to optimize the HR experience."
+      }
+    },
+    { 
       title: "AI Customer Agent", 
       category: "Generative AI", 
       overview: "An intelligent autonomous agent that handles tier-1 customer support, significantly reducing response times and support costs.",

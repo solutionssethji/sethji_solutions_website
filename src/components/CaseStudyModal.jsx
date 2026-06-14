@@ -61,6 +61,26 @@ const CaseStudyModal = ({ isOpen, onClose, project }) => {
                   <p className="outcome-text">{details.businessResult}</p>
                 </div>
               </div>
+
+              {(project.link || project.playStoreLink || project.appStoreLink) && (
+                <div className="case-study-links mt-6 text-center" style={{ marginTop: '2rem', textAlign: 'center', display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  {project.link && (
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-glow" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+                      Visit Website <i className="fa-solid fa-globe"></i>
+                    </a>
+                  )}
+                  {project.playStoreLink && (
+                    <a href={project.playStoreLink} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-glow" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+                      Play Store <i className="fa-brands fa-google-play"></i>
+                    </a>
+                  )}
+                  {project.appStoreLink && (
+                    <a href={project.appStoreLink} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-glow" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+                      App Store <i className="fa-brands fa-apple"></i>
+                    </a>
+                  )}
+                </div>
+              )}
             </div>
           </motion.div>
         </div>

@@ -52,6 +52,10 @@
 .bg-ecommerce { background: url('/ecommerce_mockup.png') center/cover no-repeat; }
 .bg-healthcare { background: url('/healthcare_mockup.png') center/cover no-repeat; }
 .bg-logistics { background: url('/logistics_mockup.png') center/cover no-repeat; }
+.bg-proofile { background: url('/proofile.png') center/contain no-repeat #fff; }
+.bg-revolve { background: url('/revolve.png') center/contain no-repeat #000; }
+.bg-vgmart { background: url('/vgmart.png') center/contain no-repeat #fff; }
+.bg-delyte { background: url('/delyte.png') center/contain no-repeat #e1e4e6; }
 
 .image-overlay {
   position: absolute;

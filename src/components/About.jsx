@@ -10,6 +10,7 @@ const About = () => {
       photo: "/founder-photo.jpg",
       tags: ["Flutter", "AI Automation", "SaaS Platforms", "Enterprise Software"]
     },
+    /*
     {
       name: "Vishwas Jain",
       title: "Co-Founder & COO",
@@ -31,7 +32,16 @@ const About = () => {
       photo: "/shivani-photo.jpg",
       tags: ["Marketing", "Brand Strategy", "Communications", "Partnerships"]
     }
+    */
   ];
+
+  const startYear = 2019;
+  const startMonth = 5; // June (0-indexed)
+  const currentDate = new Date();
+  let yearsOfExperience = currentDate.getFullYear() - startYear;
+  if (currentDate.getMonth() < startMonth) {
+    yearsOfExperience--;
+  }
 
   return (
     <section className="section about-section" id="about">
@@ -51,42 +61,52 @@ const About = () => {
           </p>
           
           <div className="experience-badge mx-auto mt-4">
-            <span className="exp-number text-gradient">10+</span>
+            <span className="exp-number text-gradient">{yearsOfExperience}+</span>
             <span className="exp-text">Years of Engineering Excellence</span>
           </div>
         </motion.div>
 
         {/* Bottom: Leadership Team */}
-        <div className="founders-grid">
+        <div className="mt-12">
           {founders.map((founder, index) => (
             <motion.div 
-              className="founder-card-wrapper"
+              className="portfolio-showcase-card"
               key={index}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2, duration: 0.6 }}
+              style={{ marginBottom: '3rem' }}
             >
-              <div className="founder-card">
-                <div className="founder-image-wrapper">
-                   <img 
-                    src={founder.photo} 
-                    alt={`${founder.name} - ${founder.title}`} 
-                    className="founder-photo" 
-                   />
-                </div>
-                <div className="founder-info">
-                  <h3 className="founder-name">
-                    <a href={founder.link} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.3s ease' }} onMouseOver={(e) => e.target.style.color = 'var(--color-primary)'} onMouseOut={(e) => e.target.style.color = 'inherit'}>
-                      {founder.name}
-                    </a>
-                  </h3>
-                  <p className="founder-title text-gradient">{founder.title}</p>
-                  <div className="founder-tags">
-                    {founder.tags.map((tag, i) => (
-                      <span className="tag" key={i}>{tag}</span>
+              <div 
+                className="portfolio-image-section" 
+                style={{ 
+                  backgroundImage: `url(${founder.photo})`, 
+                  backgroundPosition: 'top center'
+                }}
+              >
+              </div>
+              
+              <div className="portfolio-details-section">
+                <span className="portfolio-category">{founder.title}</span>
+                <h3 className="portfolio-title">{founder.name}</h3>
+                <p className="portfolio-overview">
+                  Leading Sethji Solutions with a focus on delivering high-performance, scalable engineering solutions. Dedicated to transforming business challenges into innovative digital experiences through modern technologies.
+                </p>
+                
+                <div className="portfolio-tech-stack">
+                  <h4 className="tech-title">Core Expertise:</h4>
+                  <div className="tech-tags">
+                    {founder.tags.map((tag, idx) => (
+                      <span key={idx} className="tech-tag">{tag}</span>
                     ))}
                   </div>
+                </div>
+                
+                <div className="mt-6" style={{ marginTop: '2.5rem' }}>
+                  <a href={founder.link} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
+                    View Portfolio <i className="fa-solid fa-arrow-right ml-2"></i>
+                  </a>
                 </div>
               </div>
             </motion.div>
