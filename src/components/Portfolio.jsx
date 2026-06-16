@@ -129,60 +129,76 @@ const Portfolio = () => {
   ];
 
   return (
-    <section className="section portfolio-section" id="portfolio">
+    <section className="portfolio-section" id="portfolio">
       <div className="container">
         <motion.div 
-          className="text-center mb-12"
+          className="portfolio-header text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">Featured <span className="text-gradient">Case Studies</span></h2>
-          <p className="section-subtitle">Real-world solutions that delivered measurable enterprise impact.</p>
+          <span className="section-label">SELECTED WORK</span>
+          <h2 className="portfolio-heading">Featured Projects</h2>
         </motion.div>
         
-        <div className="portfolio-list">
+        <div className="portfolio-grid">
           {projects.map((project, i) => (
             <motion.div 
-              className={`portfolio-showcase-card ${i % 2 !== 0 ? 'reverse' : ''}`} 
+              className="portfolio-card" 
               key={i}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.6, delay: i * 0.1 }}
+              onClick={() => setSelectedProject(project)}
             >
-              <div className={`portfolio-image-section ${project.imageClass}`}>
-                <div className="image-overlay">
-                  <button className="btn btn-primary btn-glow" onClick={() => setSelectedProject(project)}>
-                    View Case Study <i className="fa-solid fa-arrow-right"></i>
-                  </button>
+              <div className="portfolio-image-wrapper">
+                <div className={`portfolio-image ${project.imageClass}`}></div>
+                
+                <div className="image-expand-overlay">
+                  <span className="expand-icon">
+                    <i className="fa-solid fa-expand"></i>
+                  </span>
+                </div>
+                
+                <div className="store-icons-overlay">
+                  {project.appStoreLink && project.appStoreLink !== "#" && (
+                    <div className="store-icon" onClick={(e) => e.stopPropagation()}>
+                      <a href={project.appStoreLink} target="_blank" rel="noopener noreferrer">
+                        <i className="fa-brands fa-apple" style={{ color: '#007AFF' }}></i>
+                      </a>
+                    </div>
+                  )}
+                  {project.playStoreLink && project.playStoreLink !== "#" && (
+                    <div className="store-icon" onClick={(e) => e.stopPropagation()}>
+                      <a href={project.playStoreLink} target="_blank" rel="noopener noreferrer">
+                        {/* Custom multi-color Play Store icon approximation using standard brand icon, but simple text color or generic is fine too, using text-gradient for fun or just primary */}
+                        <i className="fa-brands fa-google-play" style={{ color: '#fff' }}></i>
+                      </a>
+                    </div>
+                  )}
+                  {project.link && project.link !== "#" && (
+                    <div className="store-icon" onClick={(e) => e.stopPropagation()}>
+                      <a href={project.link} target="_blank" rel="noopener noreferrer">
+                        <i className="fa-solid fa-globe" style={{ color: '#00d2ff' }}></i>
+                      </a>
+                    </div>
+                  )}
                 </div>
               </div>
               
-              <div className="portfolio-details-section">
-                <span className="portfolio-category">{project.category}</span>
-                <h3 className="portfolio-title">{project.title}</h3>
-                <p className="portfolio-overview">{project.overview}</p>
+              <div className="portfolio-details">
+                <h3 className="portfolio-card-title">{project.title}</h3>
+                <p className="portfolio-card-desc">{project.overview}</p>
                 
-                <div className="portfolio-tech-stack">
-                  <h4 className="tech-title">Technologies:</h4>
-                  <div className="tech-tags">
-                    {project.technologies.map((tech, idx) => (
-                      <span key={idx} className="tech-tag">{tech}</span>
-                    ))}
-                  </div>
-                </div>
-                
-                <div className="portfolio-outcome">
-                  <i className="fa-solid fa-chart-line text-gradient"></i>
-                  <span className="outcome-text"><strong>Outcome:</strong> {project.outcome}</span>
-                </div>
-                
-                <div className="mobile-only-btn mt-4">
-                  <button className="btn btn-secondary" onClick={() => setSelectedProject(project)}>
-                    Read Full Case Study
-                  </button>
+                <div className="portfolio-tags">
+                  {project.technologies.slice(0, 4).map((tech, idx) => (
+                    <span key={idx} className="portfolio-tag">{tech}</span>
+                  ))}
+                  {project.technologies.length > 4 && (
+                    <span className="portfolio-tag">+{project.technologies.length - 4}</span>
+                  )}
                 </div>
               </div>
             </motion.div>

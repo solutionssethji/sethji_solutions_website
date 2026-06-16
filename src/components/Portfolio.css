@@ -1,14 +1,202 @@
 .portfolio-section {
-  background-color: var(--color-bg-secondary);
-  padding: 6rem 0;
+  background-color: var(--color-bg);
+  padding: 2rem 0;
 }
 
-.portfolio-list {
+.portfolio-header {
+  margin-bottom: 3.5rem;
+}
+
+.portfolio-heading {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  margin-top: 0.5rem;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.portfolio-card {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  background: #11111a;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
 }
 
+.portfolio-card:hover {
+  border-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-4px);
+}
+
+.portfolio-image-wrapper {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background-color: #1a1a24;
+}
+
+.portfolio-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: top center;
+  transition: transform 0.5s ease-out;
+  will-change: transform;
+}
+
+/* Premium Placeholder Backgrounds */
+.bg-ai-agent { background-image: url('/ai_agent_mockup.png'); background-position: center; }
+.bg-ecommerce { background-image: url('/ecommerce_mockup.png'); background-position: center; }
+.bg-healthcare { background-image: url('/healthcare_mockup.png'); background-position: center; }
+.bg-logistics { background-image: url('/logistics_mockup.png'); background-position: center; }
+.bg-proofile { background-image: url('/proofile.png'); background-color: #fff; background-size: contain; background-repeat: no-repeat; }
+.bg-revolve { background-image: url('/revolve.png'); background-color: #000; background-size: contain; background-repeat: no-repeat; }
+.bg-vgmart { background-image: url('/vgmart.png'); background-color: #fff; background-size: contain; background-repeat: no-repeat; }
+.bg-delyte { background-image: url('/delyte.png'); background-color: #e1e4e6; background-size: contain; background-repeat: no-repeat; }
+
+.portfolio-card:hover .portfolio-image {
+  transform: scale(1.05);
+}
+
+.image-expand-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.portfolio-card:hover .image-expand-overlay {
+  opacity: 1;
+}
+
+.expand-icon {
+  width: 56px;
+  height: 56px;
+  background: transparent;
+  border: 3px solid #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-size: 1.5rem;
+  transition: transform 0.2s;
+}
+
+.expand-icon:hover {
+  transform: scale(1.1);
+}
+
+.store-icons-overlay {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  gap: 8px;
+  z-index: 2;
+}
+
+.store-icon {
+  width: 32px;
+  height: 32px;
+  background: rgba(10, 10, 20, 0.8);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.store-icon a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.store-icon:hover {
+  transform: scale(1.1);
+  background: rgba(20, 20, 30, 0.95);
+}
+
+.portfolio-details {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.portfolio-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.portfolio-card-desc {
+  font-size: 0.95rem;
+  color: #a0a0c0;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.portfolio-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.portfolio-tag {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #d0d0e0;
+}
+
+/* Restored classes for About section (Founder Card) */
 .portfolio-showcase-card {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -27,50 +215,12 @@
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
 }
 
-.portfolio-showcase-card.reverse {
-  grid-template-columns: 1fr 1fr;
-}
-
-.portfolio-showcase-card.reverse .portfolio-image-section {
-  order: 2;
-}
-
-.portfolio-showcase-card.reverse .portfolio-details-section {
-  order: 1;
-}
-
 .portfolio-image-section {
   position: relative;
   min-height: 400px;
   background-size: cover;
   background-position: center;
   overflow: hidden;
-}
-
-/* Premium Placeholder Backgrounds */
-.bg-ai-agent { background: url('/ai_agent_mockup.png') center/cover no-repeat; }
-.bg-ecommerce { background: url('/ecommerce_mockup.png') center/cover no-repeat; }
-.bg-healthcare { background: url('/healthcare_mockup.png') center/cover no-repeat; }
-.bg-logistics { background: url('/logistics_mockup.png') center/cover no-repeat; }
-.bg-proofile { background: url('/proofile.png') center/contain no-repeat #fff; }
-.bg-revolve { background: url('/revolve.png') center/contain no-repeat #000; }
-.bg-vgmart { background: url('/vgmart.png') center/contain no-repeat #fff; }
-.bg-delyte { background: url('/delyte.png') center/contain no-repeat #e1e4e6; }
-
-.image-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  backdrop-filter: blur(5px);
-}
-
-.portfolio-showcase-card:hover .image-overlay {
-  opacity: 1;
 }
 
 .portfolio-details-section {
@@ -129,54 +279,12 @@
   color: var(--color-text);
 }
 
-.portfolio-outcome {
-  background: rgba(138, 43, 226, 0.1);
-  border-left: 3px solid var(--color-primary);
-  padding: 1rem 1.5rem;
-  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-}
-
-.portfolio-outcome i {
-  margin-top: 0.3rem;
-  font-size: 1.2rem;
-}
-
-.outcome-text {
-  font-size: 1rem;
-  color: var(--color-text);
-}
-
-.mobile-only-btn {
-  display: none;
-}
-
 @media (max-width: 992px) {
-  .portfolio-showcase-card,
-  .portfolio-showcase-card.reverse {
+  .portfolio-showcase-card {
     grid-template-columns: 1fr;
   }
-  
-  .portfolio-showcase-card.reverse .portfolio-image-section {
-    order: 1;
-  }
-  
-  .portfolio-showcase-card.reverse .portfolio-details-section {
-    order: 2;
-  }
-  
   .portfolio-image-section {
     min-height: 250px;
-  }
-
-  .image-overlay {
-    display: none; /* Hide overlay on mobile since hover is tricky */
-  }
-
-  .mobile-only-btn {
-    display: block;
   }
 }
 
@@ -184,7 +292,6 @@
   .portfolio-details-section {
     padding: 2rem;
   }
-  
   .portfolio-title {
     font-size: 1.8rem;
   }
