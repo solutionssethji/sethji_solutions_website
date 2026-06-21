@@ -8,6 +8,21 @@ const Portfolio = () => {
 
   const projects = [
     { 
+      title: "CodeMentorAI", 
+      category: "AI Platform", 
+      overview: "The world's most advanced AI-powered platform for teaching programming languages.",
+      technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Firebase", "AI"],
+      outcome: "Revolutionizing programming education with AI",
+      imageClass: "bg-codementor",
+      link: "https://code-mentor-ai-peach.vercel.app/",
+      caseStudyDetails: {
+        challenge: "Creating an interactive, AI-driven learning environment for mastering programming languages.",
+        solution: "Developed a comprehensive platform using Next.js and Firebase, integrating multiple AI models to provide real-time mentorship and personalized coding lessons.",
+        techUsed: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Firebase", "OpenAI API", "Anthropic API"],
+        businessResult: "Successfully built an advanced educational platform that accelerates the learning process for developers through personalized AI guidance."
+      }
+    },
+    { 
       title: "Proofile.in", 
       category: "Mobile App Development", 
       overview: "A dedicated mobile application built exclusively for digital profiling and networking, available on the App Store and Google Play Store.",

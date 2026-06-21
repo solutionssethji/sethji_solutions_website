@@ -75,6 +75,7 @@
 .bg-revolve { background-image: url('/revolve.png'); background-color: #000; background-size: contain; background-repeat: no-repeat; }
 .bg-vgmart { background-image: url('/vgmart.png'); background-color: #fff; background-size: contain; background-repeat: no-repeat; }
 .bg-delyte { background-image: url('/delyte.png'); background-color: #e1e4e6; background-size: contain; background-repeat: no-repeat; }
+.bg-codementor { background-image: url('/codementor_logo.png'); background-color: #0b0f19; background-size: cover; background-repeat: no-repeat; background-position: center; }
 
 .portfolio-card:hover .portfolio-image {
   transform: scale(1.05);
