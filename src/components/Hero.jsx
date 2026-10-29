@@ -3,122 +3,161 @@ import './Hero.css';
 
 const Hero = () => {
   const scrollToContact = () => {
-    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollToPortfolio = () => {
+    document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
     <section className="hero-section" id="home">
-      <div className="hero-bg-shapes">
-        <div className="hero-glow primary-glow"></div>
-        <div className="hero-glow secondary-glow"></div>
+      {/* Background Ambient Lighting */}
+      <div className="hero-ambient-glows">
+        <div className="glow-sphere blue-glow"></div>
+        <div className="glow-sphere purple-glow"></div>
+        <div className="hero-grid-overlay"></div>
       </div>
 
       <div className="container hero-container">
-        <div className="hero-content-wrapper">
-          {/* Left Column: Copy & CTAs */}
+        <div className="hero-grid-layout">
+          {/* Left Column: Copy & Conversions */}
           <motion.div 
-            className="hero-text-content"
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
+            className="hero-text-col"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <motion.div 
-              className="badge"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-            >
-              Enterprise-Grade Software & AI
-            </motion.div>
-            <motion.h1 
-              className="hero-title"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-            >
-              Scale Your Vision with <br/>
-              <span className="text-gradient">Intelligent Solutions</span>
-            </motion.h1>
-            <motion.p 
-              className="hero-subtitle"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-            >
-              We engineer high-performance Mobile Apps, SaaS Platforms, and AI Automations that turn complex challenges into competitive advantages for modern enterprises.
-            </motion.p>
-            <motion.div 
-              className="hero-cta-group"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.5 }}
-            >
-              <button className="btn btn-primary btn-glow" onClick={scrollToContact}>
-                Schedule Discovery Call <i className="fa-solid fa-arrow-right"></i>
+            <div className="hero-eyebrow">
+              <span className="pulsing-indicator"></span>
+              <span>Premier Software Engineering Agency</span>
+            </div>
+
+            <h1 className="hero-headline">
+              Building Digital Experiences That <span className="text-gradient">Move Businesses Forward.</span>
+            </h1>
+
+            <p className="hero-lead">
+              We design and develop modern websites, mobile applications, and digital products that help businesses turn ideas into reality.
+            </p>
+
+            <div className="hero-cta-wrapper">
+              <button className="btn btn-primary btn-hero-cta" onClick={scrollToContact}>
+                Start a Project <i className="fa-solid fa-arrow-right"></i>
               </button>
-              <button className="btn btn-secondary" onClick={() => document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' })}>
-                View Our Work
+              <button className="btn btn-secondary" onClick={scrollToPortfolio}>
+                Explore Our Work <i className="fa-regular fa-folder-open"></i>
               </button>
-            </motion.div>
-            
-            <motion.div 
-              className="trust-metrics"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.2, duration: 1 }}
-            >
-              <div className="metric-item">
-                <span className="metric-value">100%</span>
-                <span className="metric-label">Project Success</span>
+            </div>
+
+            {/* Verified Business Trust Metrics */}
+            <div className="hero-trust-bar">
+              <div className="trust-item">
+                <span className="trust-val">10+</span>
+                <span className="trust-lbl">Shipped Projects</span>
               </div>
-              <div className="metric-divider"></div>
-              <div className="metric-item">
-                <span className="metric-value">AI-First</span>
-                <span className="metric-label">Architecture</span>
+              <div className="trust-sep"></div>
+              <div className="trust-item">
+                <span className="trust-val">Multi-Platform</span>
+                <span className="trust-lbl">Flutter & Web</span>
               </div>
-              <div className="metric-divider"></div>
-              <div className="metric-item">
-                <span className="metric-value">Scalable</span>
-                <span className="metric-label">Infrastructure</span>
+              <div className="trust-sep"></div>
+              <div className="trust-item">
+                <span className="trust-val">100%</span>
+                <span className="trust-lbl">Tailored Code</span>
               </div>
-            </motion.div>
+            </div>
           </motion.div>
 
-          {/* Right Column: Visual Showcase */}
+          {/* Right Column: Layered Product Visual Composition */}
           <motion.div 
-            className="hero-visual-showcase"
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+            className="hero-visual-col"
+            initial={{ opacity: 0, scale: 0.94 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
           >
-            {/* These divs act as premium placeholders for the actual images */}
-            <div className="showcase-element dashboard-mockup">
-              <div className="mockup-header">
-                <span className="dot red"></span>
-                <span className="dot yellow"></span>
-                <span className="dot green"></span>
-              </div>
-              <div className="mockup-body">
-                 <div className="mockup-chart"></div>
-                 <div className="mockup-bars">
-                    <div className="bar" style={{height: '60%'}}></div>
-                    <div className="bar" style={{height: '80%'}}></div>
-                    <div className="bar" style={{height: '40%'}}></div>
-                    <div className="bar" style={{height: '100%'}}></div>
-                 </div>
-              </div>
-            </div>
-            
-            <div className="showcase-element mobile-mockup">
-               <div className="mobile-notch"></div>
-               <div className="mobile-content">
-                  <div className="mobile-card"></div>
-                  <div className="mobile-card"></div>
-               </div>
-            </div>
+            <div className="hero-composition">
+              {/* Main Desktop Web Console Panel */}
+              <div className="composition-card main-preview-card">
+                <div className="panel-chrome">
+                  <div className="chrome-dots">
+                    <span className="chrome-dot red"></span>
+                    <span className="chrome-dot yellow"></span>
+                    <span className="chrome-dot green"></span>
+                  </div>
+                  <div className="chrome-address-bar">
+                    <i className="fa-solid fa-lock"></i> code-mentor-ai.vercel.app
+                  </div>
+                  <div className="chrome-badge">Live Platform</div>
+                </div>
 
-            <div className="showcase-element ai-floating-badge">
-              <i className="fa-solid fa-robot"></i> AI Automation Active
+                <div className="panel-inner-content">
+                  <div className="panel-banner-mock">
+                    <div className="panel-tag">AI CODE MENTOR</div>
+                    <h4>Next.js & Firebase Cloud Architecture</h4>
+                    <p>Interactive real-time learning platform with integrated LLM mentors.</p>
+                  </div>
+
+                  <div className="panel-mini-metrics">
+                    <div className="mini-metric">
+                      <span className="metric-title">Performance</span>
+                      <div className="metric-bar-bg">
+                        <div className="metric-bar-fill" style={{ width: '96%' }}></div>
+                      </div>
+                      <span className="metric-num">96%</span>
+                    </div>
+                    <div className="mini-metric">
+                      <span className="metric-title">Uptime</span>
+                      <div className="metric-bar-bg">
+                        <div className="metric-bar-fill purple" style={{ width: '99.9%' }}></div>
+                      </div>
+                      <span className="metric-num">99.9%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Floating Mobile App Screen Panel */}
+              <motion.div 
+                className="composition-card floating-mobile-card"
+                animate={{ y: [0, -8, 0] }}
+                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <div className="phone-screen">
+                  <div className="phone-notch"></div>
+                  <div className="phone-header">
+                    <span className="phone-app-title">Proofile.in</span>
+                    <i className="fa-solid fa-signal"></i>
+                  </div>
+                  <div className="phone-body">
+                    <div className="phone-avatar"></div>
+                    <div className="phone-line title"></div>
+                    <div className="phone-line short"></div>
+                    <div className="phone-action-btn">
+                      <i className="fa-brands fa-apple"></i> App Store & Play Store
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Floating Engineering Badge */}
+              <motion.div 
+                className="floating-tech-chip chip-top"
+                animate={{ y: [0, 6, 0] }}
+                transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+              >
+                <i className="fa-solid fa-bolt" style={{ color: '#F59E0B' }}></i>
+                <span>Fast & SEO Ready</span>
+              </motion.div>
+
+              <motion.div 
+                className="floating-tech-chip chip-bottom"
+                animate={{ y: [0, -6, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+              >
+                <i className="fa-brands fa-flutter" style={{ color: '#02569B' }}></i>
+                <span>Cross-Platform Flutter</span>
+              </motion.div>
             </div>
           </motion.div>
         </div>

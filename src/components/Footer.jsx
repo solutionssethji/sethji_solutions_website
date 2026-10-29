@@ -9,11 +9,16 @@ const Footer = () => {
     <footer style={{ backgroundColor: '#05050a', padding: '4rem 0', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
       <div className="container">
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '3rem' }}>
-          <div style={{ flex: '1', minWidth: '250px' }}>
-            <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', marginBottom: '1rem' }}>
-            </h3>
-            <p style={{ color: 'var(--color-text-muted)', fontSize: '0.95rem', maxWidth: '350px', lineHeight: '1.6' }}>
-              Ideas. Innovative. Impactful. Building the next generation of digital solutions, AI integrations, and mobile applications for ambitious enterprises.
+          <div style={{ flex: '1', minWidth: '280px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '1.25rem' }}>
+              <img src="/transparent-logo.png" alt="Sethji Solutions Logo" style={{ height: '42px', objectFit: 'contain' }} />
+              <div>
+                <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: '1.4rem', color: '#fff', letterSpacing: '-0.5px', display: 'block', lineHeight: 1 }}>Sethji</span>
+                <span style={{ fontFamily: 'var(--font-heading)', fontSize: '0.65rem', fontWeight: 700, color: 'var(--color-primary)', letterSpacing: '2.5px', textTransform: 'uppercase' }}>SOLUTIONS</span>
+              </div>
+            </div>
+            <p style={{ color: 'var(--color-text-muted)', fontSize: '0.92rem', maxWidth: '380px', lineHeight: '1.65' }}>
+              Building digital experiences that move businesses forward. Custom websites, cross-platform Flutter applications, and enterprise cloud software.
             </p>
           </div>
           

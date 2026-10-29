@@ -54,10 +54,12 @@ const About = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <div className="badge-glow">About Us</div>
+          <div className="section-eyebrow">
+            <i className="fa-solid fa-users"></i> Leadership & Mission
+          </div>
           <h2 className="section-title">The Vision Behind <br/><span className="text-gradient">Sethji Solutions</span></h2>
           <p className="section-subtitle max-w-800 mx-auto">
-            We don't just write code; we engineer scalable solutions that act as catalysts for enterprise growth. Our mission is to empower ambitious startups and established enterprises with modern digital tools—from intelligent AI integrations to robust mobile applications.
+            We don't just write code; we engineer scalable solutions that act as catalysts for enterprise growth. Our mission is to empower ambitious businesses with modern digital tools—from responsive web applications to robust cross-platform mobile apps.
           </p>
           
           <div className="experience-badge mx-auto mt-4">

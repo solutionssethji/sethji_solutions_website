@@ -96,34 +96,81 @@ const Contact = () => {
               <input type="hidden" name="_captcha" value="false" />
               
               <div className="form-group">
-                <input type="text" name="name" placeholder="Your Name" required />
+                <label className="form-label">Full Name *</label>
+                <input type="text" name="name" placeholder="John Doe" required />
               </div>
-              <div className="form-group">
-                <input type="email" name="email" placeholder="Your Email" required />
+
+              <div className="form-row-2">
+                <div className="form-group">
+                  <label className="form-label">Work Email *</label>
+                  <input type="email" name="email" placeholder="john@company.com" required />
+                </div>
+                <div className="form-group">
+                  <label className="form-label">Phone Number</label>
+                  <input type="tel" name="phone" placeholder="+91 9876543210" />
+                </div>
               </div>
-              <div className="form-group">
-                <input type="tel" name="phone" placeholder="Your Phone" />
+
+              <div className="form-row-2">
+                <div className="form-group">
+                  <label className="form-label">Project Type</label>
+                  <select name="project_type" className="form-select" defaultValue="Website Development">
+                    <option value="Website Development">Website Development</option>
+                    <option value="Mobile App Development">Flutter Mobile App</option>
+                    <option value="Admin Dashboard">Admin Dashboard</option>
+                    <option value="E-Commerce Solutions">E-Commerce Store</option>
+                    <option value="AI & Backend Automation">AI & Cloud Backend</option>
+                    <option value="Redesign & Maintenance">Maintenance & Redesign</option>
+                  </select>
+                </div>
+                <div className="form-group">
+                  <label className="form-label">Estimated Budget</label>
+                  <select name="budget" className="form-select" defaultValue="₹25k - ₹50k">
+                    <option value="Under ₹25,000">Under ₹25,000</option>
+                    <option value="₹25k - ₹50k">₹25,000 – ₹50,000</option>
+                    <option value="₹50k - ₹1.5 Lakh">₹50,000 – ₹1,50,000</option>
+                    <option value="₹1.5 Lakh - ₹3 Lakh">₹1,50,000 – ₹3,00,000</option>
+                    <option value="₹3 Lakh+">₹3,00,000+</option>
+                  </select>
+                </div>
               </div>
+
               <div className="form-group">
-                <textarea name="message" placeholder="Tell us about your project" rows="5" required></textarea>
+                <label className="form-label">Project Details *</label>
+                <textarea name="message" placeholder="Briefly describe your objectives, timeline, or reference links..." rows="4" required></textarea>
               </div>
               
               {status === 'success' && (
-                <div style={{ color: '#4ade80', marginBottom: '1rem', textAlign: 'center', fontWeight: 'bold' }}>
-                  <i className="fa-solid fa-circle-check"></i> Message sent successfully! We will get back to you soon.
+                <div className="form-status-alert success">
+                  <i className="fa-solid fa-circle-check"></i> Thank you! Message sent successfully. We will reply within 24 hours.
                 </div>
               )}
               {status === 'error' && (
-                <div style={{ color: '#f87171', marginBottom: '1rem', textAlign: 'center' }}>
-                  <i className="fa-solid fa-circle-exclamation"></i> Something went wrong. Please try again.
+                <div className="form-status-alert error">
+                  <i className="fa-solid fa-circle-exclamation"></i> Something went wrong. Please reach out via WhatsApp or call us directly.
                 </div>
               )}
 
               <button type="submit" className="btn btn-primary w-100" disabled={status === 'submitting'}>
-                {status === 'submitting' ? 'Sending...' : (
-                  <>Send Message <i className="fa-solid fa-paper-plane"></i></>
+                {status === 'submitting' ? (
+                  <>Sending Enquiry... <i className="fa-solid fa-spinner fa-spin"></i></>
+                ) : (
+                  <>Send Project Brief <i className="fa-solid fa-paper-plane"></i></>
                 )}
               </button>
+
+              <div className="form-or-divider">
+                <span>OR</span>
+              </div>
+
+              <a 
+                href="https://wa.me/918815148099?text=Hello%20Sethji%20Solutions,%20I%20would%20like%20to%20discuss%20a%20new%20project." 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn btn-whatsapp w-100"
+              >
+                <i className="fa-brands fa-whatsapp"></i> Chat on WhatsApp Instantly
+              </a>
             </form>
           </div>
         </div>

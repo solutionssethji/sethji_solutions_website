@@ -4,34 +4,34 @@ import './WhyUs.css';
 const WhyUs = () => {
   const features = [
     {
-      icon: "fa-solid fa-brain",
-      title: "AI-First Development",
-      description: "We don't just add AI as an afterthought. We architect intelligent systems from the ground up."
+      icon: "fa-solid fa-mobile-screen-button",
+      title: "Responsive & Accessible",
+      description: "Pixel-perfect interfaces designed desktop-first and tested rigorously across laptops, tablets, and phones."
     },
     {
-      icon: "fa-solid fa-server",
-      title: "Scalable Architecture",
-      description: "Built to handle thousands to millions of users seamlessly without breaking a sweat."
+      icon: "fa-solid fa-code-branch",
+      title: "Maintainable Architecture",
+      description: "Clean, modular code built on battle-tested frameworks that your team can scale with confidence."
     },
     {
-      icon: "fa-solid fa-bolt",
-      title: "Fast Delivery",
-      description: "Agile methodologies ensure rapid deployment without compromising on enterprise quality."
+      icon: "fa-solid fa-gauge-high",
+      title: "Performance Conscious",
+      description: "Sub-second load speeds, lightweight bundles, and Core Web Vitals optimization for maximum search visibility."
+    },
+    {
+      icon: "fa-solid fa-comments",
+      title: "Clear Communication",
+      description: "Transparent sprint milestones, direct developer access, and regular demo walkthroughs at every stage."
+    },
+    {
+      icon: "fa-solid fa-shield-check",
+      title: "Quality Assurance",
+      description: "Automated unit tests, manual edge-case testing, cross-browser audits, and zero-compromise security checks."
     },
     {
       icon: "fa-solid fa-headset",
-      title: "Long-Term Support",
-      description: "We are your technology partners. We maintain, secure, and scale your product over time."
-    },
-    {
-      icon: "fa-solid fa-rocket",
-      title: "Startup Friendly",
-      description: "Flexible models designed to help ambitious startups launch MVPs and scale quickly."
-    },
-    {
-      icon: "fa-solid fa-building",
-      title: "Enterprise Ready",
-      description: "Robust security, compliance, and custom integrations tailored for large-scale operations."
+      title: "Ongoing Support & SLA",
+      description: "Continuous version updates, server maintenance, fast-turnaround bug fixes, and cloud infrastructure management."
     }
   ];
 
@@ -54,32 +54,15 @@ const WhyUs = () => {
     <section className="section why-us-section" id="why-us">
       <div className="container">
         <div className="section-header text-center mb-12">
-          <motion.span 
-            className="section-badge"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            Credibility & Trust
-          </motion.span>
-          <motion.h2 
-            className="section-title"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-          >
-            Why Choose <span className="text-gradient">Sethji Solutions?</span>
-          </motion.h2>
-          <motion.p 
-            className="section-subtitle"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-          >
-            We combine technical excellence with business acumen to deliver software that drives real growth.
-          </motion.p>
+          <div className="section-eyebrow">
+            <i className="fa-solid fa-award"></i> The Sethji Advantage
+          </div>
+          <h2 className="section-title">
+            Why Partner with <span className="text-gradient">Sethji Solutions</span>
+          </h2>
+          <p className="section-subtitle">
+            We operate as an extension of your product team, combining engineering rigor with design excellence to deliver reliable software.
+          </p>
         </div>
 
         <motion.div 

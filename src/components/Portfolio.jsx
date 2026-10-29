@@ -174,7 +174,7 @@ const Portfolio = () => {
   ];
 
   return (
-    <section className="portfolio-section" id="portfolio">
+    <section className="section portfolio-section" id="portfolio">
       <div className="container">
         <motion.div 
           className="portfolio-header text-center"
@@ -183,50 +183,57 @@ const Portfolio = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="section-label">SELECTED WORK</span>
-          <h2 className="portfolio-heading">Featured Projects</h2>
+          <div className="section-eyebrow">
+            <i className="fa-solid fa-briefcase"></i> Selected Work
+          </div>
+          <h2 className="section-title">
+            Featured <span className="text-gradient">Client Engagements</span>
+          </h2>
+          <p className="portfolio-subheading">
+            A curated showcase of real-world digital applications, e-commerce stores, and multi-platform solutions engineered by Sethji Solutions.
+          </p>
         </motion.div>
         
         <div className="portfolio-grid">
           {projects.map((project, i) => (
             <motion.div 
               className="portfolio-card" 
-              key={i}
-              initial={{ opacity: 0, y: 40 }}
+              key={project.title}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.5, delay: (i % 2) * 0.15 }}
               onClick={() => setSelectedProject(project)}
             >
               <div className="portfolio-image-wrapper">
                 <div className={`portfolio-image ${project.imageClass}`}></div>
+                <div className="portfolio-badge">{project.category}</div>
                 
                 <div className="image-expand-overlay">
-                  <span className="expand-icon">
-                    <i className="fa-solid fa-expand"></i>
+                  <span className="expand-pill">
+                    <i className="fa-solid fa-arrow-up-right-from-square"></i> Case Study
                   </span>
                 </div>
                 
                 <div className="store-icons-overlay">
                   {project.appStoreLink && project.appStoreLink !== "#" && (
-                    <div className="store-icon" onClick={(e) => e.stopPropagation()}>
+                    <div className="store-icon" onClick={(e) => e.stopPropagation()} title="App Store">
                       <a href={project.appStoreLink} target="_blank" rel="noopener noreferrer">
                         <i className="fa-brands fa-apple" style={{ color: '#007AFF' }}></i>
                       </a>
                     </div>
                   )}
                   {project.playStoreLink && project.playStoreLink !== "#" && (
-                    <div className="store-icon" onClick={(e) => e.stopPropagation()}>
+                    <div className="store-icon" onClick={(e) => e.stopPropagation()} title="Google Play">
                       <a href={project.playStoreLink} target="_blank" rel="noopener noreferrer">
-                        {/* Custom multi-color Play Store icon approximation using standard brand icon, but simple text color or generic is fine too, using text-gradient for fun or just primary */}
                         <i className="fa-brands fa-google-play" style={{ color: '#fff' }}></i>
                       </a>
                     </div>
                   )}
                   {project.link && project.link !== "#" && (
-                    <div className="store-icon" onClick={(e) => e.stopPropagation()}>
+                    <div className="store-icon" onClick={(e) => e.stopPropagation()} title="Live Site">
                       <a href={project.link} target="_blank" rel="noopener noreferrer">
-                        <i className="fa-solid fa-globe" style={{ color: '#00d2ff' }}></i>
+                        <i className="fa-solid fa-globe" style={{ color: '#4F8CFF' }}></i>
                       </a>
                     </div>
                   )}
@@ -244,6 +251,12 @@ const Portfolio = () => {
                   {project.technologies.length > 4 && (
                     <span className="portfolio-tag">+{project.technologies.length - 4}</span>
                   )}
+                </div>
+
+                <div className="portfolio-card-footer">
+                  <span className="view-case-link">
+                    Explore Details <i className="fa-solid fa-arrow-right"></i>
+                  </span>
                 </div>
               </div>
             </motion.div>

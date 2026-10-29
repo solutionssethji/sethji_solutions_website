@@ -5,32 +5,38 @@ const Process = () => {
   const steps = [
     {
       number: "01",
-      title: "Discovery & Strategy",
-      description: "We dive deep into your business requirements, analyze your target audience, and formulate a strategic roadmap tailored to your specific goals.",
+      title: "Discovery",
+      description: "We dive deep into your project vision, user requirements, and technical prerequisites to construct an actionable roadmap.",
       icon: "fa-compass"
     },
     {
       number: "02",
-      title: "Architecture & Design",
-      description: "Our experts design the system architecture, UI/UX wireframes, and select the optimal technology stack (React, Flutter, AI integrations) to ensure scalability.",
+      title: "UI/UX Design",
+      description: "Our design team crafts high-fidelity wireframes, responsive design systems, and seamless user interaction prototypes.",
       icon: "fa-pen-ruler"
     },
     {
       number: "03",
-      title: "Agile Development",
-      description: "We build your product using agile methodologies, providing you with regular updates and functioning prototypes to ensure we remain aligned with your vision.",
+      title: "Development",
+      description: "We engineer production-grade web and mobile applications using clean, maintainable architecture in React and Flutter.",
       icon: "fa-code"
     },
     {
       number: "04",
-      title: "Deployment & Scaling",
-      description: "Rigorous testing precedes deployment to cloud infrastructure (AWS/GCP). We ensure a smooth launch followed by ongoing maintenance and scalability support.",
+      title: "Testing",
+      description: "End-to-end quality assurance, multi-device viewport tests, performance benchmarking, and security validations.",
+      icon: "fa-vial-circle-check"
+    },
+    {
+      number: "05",
+      title: "Deployment & Support",
+      description: "Production release to cloud infrastructure (AWS/GCP/Vercel) and stores, followed by ongoing updates and SLA monitoring.",
       icon: "fa-rocket"
     }
   ];
 
   return (
-    <section className="section process-section" id="process">
+    <section className="section process-section section-alt" id="process">
       <div className="container">
         <motion.div 
           className="text-center mb-12"
@@ -39,7 +45,9 @@ const Process = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="badge-glow">How We Work</div>
+          <div className="section-eyebrow">
+            <i className="fa-solid fa-timeline"></i> Development Lifecycle
+          </div>
           <h2 className="section-title">Our Proven <span className="text-gradient">Process</span></h2>
           <p className="section-subtitle">A transparent, structured approach to turning complex ideas into powerful digital realities.</p>
         </motion.div>
