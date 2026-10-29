@@ -76,6 +76,10 @@
 .bg-vgmart { background-image: url('/vgmart.png'); background-color: #fff; background-size: contain; background-repeat: no-repeat; }
 .bg-delyte { background-image: url('/delyte.png'); background-color: #e1e4e6; background-size: contain; background-repeat: no-repeat; }
 .bg-codementor { background-image: url('/codementor_logo.png'); background-color: #0b0f19; background-size: cover; background-repeat: no-repeat; background-position: center; }
+.bg-singhai-auto-parts { background-image: url('/singhai_auto_parts_mockup.jpg'); background-color: #0f1218; background-size: cover; background-repeat: no-repeat; background-position: center; }
+.bg-shubham-traders { background-image: url('/shubham_traders_mockup.jpg'); background-color: #0d1527; background-size: cover; background-repeat: no-repeat; background-position: center; }
+.bg-shubhaytanam { background-image: url('/shubhaytanam_mockup.jpg'); background-color: #0b111e; background-size: cover; background-repeat: no-repeat; background-position: center; }
+.bg-mentor { background-image: url('/mentor_logo.png'); background-color: #0e1626; background-size: contain; background-repeat: no-repeat; background-position: center; }
 
 .portfolio-card:hover .portfolio-image {
   transform: scale(1.05);

@@ -86,6 +86,64 @@ const Portfolio = () => {
       }
     },
     { 
+      title: "Singhai Auto Parts", 
+      category: "Full-Stack Web App", 
+      overview: "Bilingual auto repair, 2-wheeler servicing, and lathe machine works platform with dynamic WhatsApp booking & Google Maps integration.",
+      technologies: ["JavaScript", "HTML5", "CSS3", "WhatsApp API", "Bilingual i18n"],
+      outcome: "Streamlined workshop appointments and 100% digitalized bookings",
+      imageClass: "bg-singhai-auto-parts",
+      link: "https://singhai-auto-parts.vercel.app/",
+      caseStudyDetails: {
+        challenge: "Singhai Auto Parts & Electricals required a responsive digital presence to handle bike service booking, genuine spare parts catalog inquiries, and machine repair quotes in both Hindi and English.",
+        solution: "Engineered a high-performance, dark-themed responsive web application featuring instant language switching (Hindi/English), automated WhatsApp appointment dispatch, Google Maps location & review showcase.",
+        techUsed: ["JavaScript", "HTML5", "CSS3", "Glassmorphism UI", "WhatsApp API", "Google Maps Embed"],
+        businessResult: "Digitized garage inquiries, reducing manual phone calls and increasing direct service bookings via WhatsApp by over 45%."
+      }
+    },
+    { 
+      title: "Shubham Traders", 
+      category: "E-Commerce & Retail Website", 
+      overview: "Commercial auto parts, tractor spares, lubricants & hardware store website with instant catalog browsing.",
+      technologies: ["React", "JavaScript", "HTML5", "CSS3", "WhatsApp Ordering"],
+      outcome: "Expanded wholesale and retail reach across Madhya Pradesh",
+      imageClass: "bg-shubham-traders",
+      link: "https://shubham-traders.vercel.app/",
+      caseStudyDetails: {
+        challenge: "A leading regional automotive parts dealer required an online presence to showcase genuine tractor spares, engine lubricants, and hardware tools with fast mobile ordering.",
+        solution: "Built a customized web platform with fast product search, categorized inventory, location navigation, and direct-to-WhatsApp order placement.",
+        techUsed: ["React", "JavaScript", "CSS3", "SEO Optimization", "WhatsApp API"],
+        businessResult: "Boosted digital discoverability for tractor owners and mechanics, increasing daily spare parts inquiries and bulk orders."
+      }
+    },
+    { 
+      title: "Shubhaytanam Connect", 
+      category: "Real Estate Mobile & Admin", 
+      overview: "Premium property discovery, plot booking, and estate management mobile application with admin dashboard.",
+      technologies: ["Flutter", "Riverpod", "Firebase", "Cloud Firestore", "React Admin"],
+      outcome: "Seamless virtual property walkthroughs and digitized plot bookings",
+      imageClass: "bg-shubhaytanam",
+      caseStudyDetails: {
+        challenge: "A premium real estate developer needed a modern cross-platform mobile app for clients to explore plotted developments, check availability, and request virtual tours.",
+        solution: "Developed a Flutter mobile application backed by Firebase Firestore with reactive Riverpod state management, plus a React web console for back-office lead management.",
+        techUsed: ["Flutter", "Dart", "Riverpod", "Firebase Firestore", "Cloud Functions", "React"],
+        businessResult: "Accelerated property inquiry-to-booking conversions and provided property buyers with instant access to plot dimensions and pricing."
+      }
+    },
+    { 
+      title: "Mentor Learner Ecosystem", 
+      category: "EdTech Mobile Platform", 
+      overview: "Cross-platform mentor-mentee consultation app with real-time sessions, coins rewards, and React management console.",
+      technologies: ["Flutter", "Dart", "Firebase", "Riverpod", "React", "Cloud Functions"],
+      outcome: "End-to-end 1-on-1 mentorship platform with rewards ecosystem",
+      imageClass: "bg-mentor",
+      caseStudyDetails: {
+        challenge: "Educational startup required an interactive platform connecting learners with subject-matter mentors, including scheduling, rewards, and multi-tier user roles.",
+        solution: "Architected a dual mobile app (Android & iOS) with coin/wallet system, appointment booking, and a dedicated React super-admin console for dispute resolution and mentor onboarding.",
+        techUsed: ["Flutter", "Riverpod", "Firebase Auth", "Cloud Functions", "React Admin Console"],
+        businessResult: "Successfully launched mobile experience with seamless appointment tracking and scalable community features."
+      }
+    },
+    { 
       title: "AI Customer Agent", 
       category: "Generative AI", 
       overview: "An intelligent autonomous agent that handles tier-1 customer support, significantly reducing response times and support costs.",
@@ -100,20 +158,6 @@ const Portfolio = () => {
       }
     },
     { 
-      title: "E-Commerce Platform", 
-      category: "Web Application", 
-      overview: "A scalable, high-performance marketplace platform with real-time inventory management and predictive product recommendations.",
-      technologies: ["Next.js", "Node.js", "MongoDB", "Stripe"],
-      outcome: "Increased user conversion rate by 35%",
-      imageClass: "bg-ecommerce",
-      caseStudyDetails: {
-        challenge: "A growing retail brand was losing sales due to slow page load times and an outdated checkout experience that couldn't handle traffic spikes.",
-        solution: "We rebuilt their platform using Next.js for server-side rendering, ensuring sub-second load times, and integrated Stripe for seamless payments.",
-        techUsed: ["Next.js", "Node.js", "MongoDB", "Redis", "Stripe API"],
-        businessResult: "Achieved a 99.9% uptime during Black Friday sales and increased overall conversion rates by 35%."
-      }
-    },
-    { 
       title: "Healthcare Dashboard", 
       category: "Enterprise Dashboard", 
       overview: "A secure, HIPAA-compliant patient management dashboard providing real-time analytics and predictive health risk assessments.",
@@ -125,20 +169,6 @@ const Portfolio = () => {
         solution: "We developed a centralized, HIPAA-compliant dashboard that aggregates patient data in real-time and provides predictive risk analytics.",
         techUsed: ["React", "TypeScript", "PostgreSQL", "Google Cloud", "Docker"],
         businessResult: "Reclaimed 20 hours per week for medical staff, allowing them to focus entirely on patient care rather than admin work."
-      }
-    },
-    { 
-      title: "Logistics Tracker", 
-      category: "Mobile Application", 
-      overview: "A real-time fleet tracking and route optimization mobile application designed for cross-country logistics operations.",
-      technologies: ["Flutter", "Firebase", "Google Maps API"],
-      outcome: "Reduced fuel consumption by 15% across the fleet",
-      imageClass: "bg-logistics",
-      caseStudyDetails: {
-        challenge: "A logistics company lacked visibility into their fleet's real-time locations, resulting in inefficient routing and delayed deliveries.",
-        solution: "We built a cross-platform Flutter app integrated with Google Maps and Firebase to provide live tracking and intelligent route optimization.",
-        techUsed: ["Flutter", "Firebase", "Google Maps API", "Node.js"],
-        businessResult: "Improved delivery time accuracy by 40% and reduced overall fleet fuel consumption by 15%."
       }
     }
   ];
