@@ -28,11 +28,12 @@
   display: flex;
   align-items: center;
   gap: 1.25rem;
-  background: var(--color-bg-card);
+  background: var(--gradient-card);
   padding: 1.25rem 1.5rem;
   border-radius: var(--radius-sm);
   border: 1px solid var(--color-border);
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: var(--shadow-sm);
 }
 
 .info-item:hover {
@@ -44,8 +45,8 @@
 .info-icon {
   width: 48px;
   height: 48px;
-  background: rgba(79, 140, 255, 0.1);
-  border: 1px solid rgba(79, 140, 255, 0.25);
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(59, 130, 246, 0.22);
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -70,7 +71,7 @@
 
 /* Form Wrapper */
 .contact-form-wrapper {
-  background: var(--color-bg-card);
+  background: var(--gradient-card);
   padding: 3rem;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-card);
@@ -92,12 +93,12 @@
 
 .form-label {
   display: block;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 600;
   color: #CBD5E1;
   margin-bottom: 0.5rem;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.6px;
 }
 
 .form-row-2 {
@@ -111,7 +112,7 @@
 .form-select {
   width: 100%;
   padding: 0.85rem 1.15rem;
-  background: rgba(8, 11, 22, 0.7);
+  background: rgba(6, 9, 19, 0.7);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-xs);
   color: #F8FAFC;
@@ -130,7 +131,7 @@
 }
 
 .form-select option {
-  background: #0D1222;
+  background: #0A0E1A;
   color: #F8FAFC;
 }
 
@@ -139,8 +140,8 @@
 .form-select:focus {
   outline: none;
   border-color: var(--color-primary);
-  background: rgba(8, 11, 22, 0.95);
-  box-shadow: 0 0 15px rgba(79, 140, 255, 0.25);
+  background: rgba(6, 9, 19, 0.95);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
 }
 
 .form-status-alert {

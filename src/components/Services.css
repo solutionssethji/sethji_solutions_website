@@ -1,8 +1,9 @@
 .services-section {
   position: relative;
-  background-color: var(--color-bg-secondary);
+  background-color: var(--color-bg);
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
+  padding: 6.5rem 0;
 }
 
 .services-desktop-grid {
@@ -12,22 +13,22 @@
 }
 
 .service-card {
-  background: var(--color-bg-card);
-  border: 1px solid var(--color-border);
+  background: #0B1120;
+  border: 1px solid rgba(255, 255, 255, 0.09);
   border-radius: var(--radius-md);
   padding: 2.25rem 2rem;
   display: flex;
   flex-direction: column;
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .service-card:hover {
   transform: translateY(-6px);
-  border-color: var(--color-border-hover);
-  box-shadow: var(--shadow-card-hover);
-  background: var(--color-bg-card-hover);
+  border-color: rgba(59, 130, 246, 0.45);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6), 0 0 25px rgba(59, 130, 246, 0.12);
+  background: #0F172A;
 }
 
 .service-card-top {
@@ -44,13 +45,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   border: 1px solid transparent;
   transition: transform 0.3s ease;
 }
 
 .service-card:hover .service-icon-box {
-  transform: scale(1.1) rotate(4deg);
+  transform: scale(1.08);
 }
 
 .service-badge {
@@ -58,31 +59,31 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.8px;
-  color: var(--color-text-dim);
-  background: rgba(255, 255, 255, 0.03);
-  padding: 4px 10px;
+  color: #94A3B8;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 5px 12px;
   border-radius: var(--radius-full);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .service-title {
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 0.75rem;
+  color: #FFFFFF;
+  margin-bottom: 0.85rem;
   letter-spacing: -0.02em;
 }
 
 .service-desc {
-  font-size: 0.92rem;
-  color: var(--color-text-muted);
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
+  font-size: 0.94rem;
+  color: #94A3B8;
+  line-height: 1.65;
+  margin-bottom: 1.75rem;
 }
 
 .service-divider {
   height: 1px;
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.08);
   margin-bottom: 1.25rem;
   margin-top: auto;
 }
@@ -93,19 +94,20 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.65rem;
+  gap: 0.7rem;
 }
 
 .service-checklist li {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.82rem;
-  color: #CBD5E1;
+  font-size: 0.86rem;
+  color: #E2E8F0;
 }
 
 .service-checklist li i {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
+  flex-shrink: 0;
 }
 
 /* Tablet & Mobile Grid */

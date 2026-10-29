@@ -8,7 +8,6 @@ import Process from './components/Process';
 import Portfolio from './components/Portfolio';
 import Pricing from './components/Pricing';
 import FAQ from './components/FAQ';
-import Technologies from './components/Technologies';
 import TechStack from './components/TechStack';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -20,16 +19,15 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <WhyUs />
-        <About />
         <Services />
-        <AIShowcase />
-        <Process />
         <Portfolio />
+        <AIShowcase />
+        <WhyUs />
+        <Process />
+        <TechStack />
         <Pricing />
         <FAQ />
-        <Technologies />
-        <TechStack />
+        <About />
         <Contact />
       </main>
       <Footer />

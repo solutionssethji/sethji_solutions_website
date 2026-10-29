@@ -53,7 +53,7 @@ const Hero = () => {
             {/* Verified Business Trust Metrics */}
             <div className="hero-trust-bar">
               <div className="trust-item">
-                <span className="trust-val">10+</span>
+                <span className="trust-val">20+</span>
                 <span className="trust-lbl">Shipped Projects</span>
               </div>
               <div className="trust-sep"></div>
@@ -69,94 +69,92 @@ const Hero = () => {
             </div>
           </motion.div>
 
-          {/* Right Column: Layered Product Visual Composition */}
+            {/* Right Column: Layered 3D Digital Core & Floating Glass Ecosystem */}
           <motion.div 
             className="hero-visual-col"
-            initial={{ opacity: 0, scale: 0.94 }}
+            initial={{ opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
+            transition={{ duration: 0.9, delay: 0.15, ease: "easeOut" }}
           >
-            <div className="hero-composition">
-              {/* Main Desktop Web Console Panel */}
-              <div className="composition-card main-preview-card">
-                <div className="panel-chrome">
-                  <div className="chrome-dots">
-                    <span className="chrome-dot red"></span>
-                    <span className="chrome-dot yellow"></span>
-                    <span className="chrome-dot green"></span>
-                  </div>
-                  <div className="chrome-address-bar">
-                    <i className="fa-solid fa-lock"></i> code-mentor-ai.vercel.app
-                  </div>
-                  <div className="chrome-badge">Live Platform</div>
-                </div>
-
-                <div className="panel-inner-content">
-                  <div className="panel-banner-mock">
-                    <div className="panel-tag">AI CODE MENTOR</div>
-                    <h4>Next.js & Firebase Cloud Architecture</h4>
-                    <p>Interactive real-time learning platform with integrated LLM mentors.</p>
-                  </div>
-
-                  <div className="panel-mini-metrics">
-                    <div className="mini-metric">
-                      <span className="metric-title">Performance</span>
-                      <div className="metric-bar-bg">
-                        <div className="metric-bar-fill" style={{ width: '96%' }}></div>
-                      </div>
-                      <span className="metric-num">96%</span>
-                    </div>
-                    <div className="mini-metric">
-                      <span className="metric-title">Uptime</span>
-                      <div className="metric-bar-bg">
-                        <div className="metric-bar-fill purple" style={{ width: '99.9%' }}></div>
-                      </div>
-                      <span className="metric-num">99.9%</span>
-                    </div>
-                  </div>
-                </div>
+            <div className="hero-composition-3d">
+              {/* Central 3D Glowing Core Visual */}
+              <div className="core-3d-wrapper">
+                <img 
+                  src="/hero_3d_core.jpg" 
+                  alt="Sethji Solutions 3D Digital Engine" 
+                  className="core-3d-image" 
+                />
+                <div className="core-glow-halo"></div>
               </div>
 
-              {/* Floating Mobile App Screen Panel */}
+              {/* Top Glass Node: Live Platform Telemetry */}
               <motion.div 
-                className="composition-card floating-mobile-card"
+                className="floating-glass-card node-console"
                 animate={{ y: [0, -8, 0] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
               >
-                <div className="phone-screen">
-                  <div className="phone-notch"></div>
-                  <div className="phone-header">
-                    <span className="phone-app-title">Proofile.in</span>
-                    <i className="fa-solid fa-signal"></i>
+                <div className="glass-card-header">
+                  <div className="status-live-indicator">
+                    <span className="live-pulse"></span>
+                    <span>AI Engineering Engine</span>
                   </div>
-                  <div className="phone-body">
-                    <div className="phone-avatar"></div>
-                    <div className="phone-line title"></div>
-                    <div className="phone-line short"></div>
-                    <div className="phone-action-btn">
-                      <i className="fa-brands fa-apple"></i> App Store & Play Store
-                    </div>
+                  <span className="live-metric-tag">Next.js & Firebase</span>
+                </div>
+                <div className="glass-card-title">CodeMentorAI Platform</div>
+                <div className="glass-telemetry-row">
+                  <div className="telem-item">
+                    <span className="telem-label">Build Speed</span>
+                    <span className="telem-val">120ms</span>
+                  </div>
+                  <div className="telem-item">
+                    <span className="telem-label">Performance</span>
+                    <span className="telem-val highlight">99.8%</span>
+                  </div>
+                  <div className="telem-item">
+                    <span className="telem-label">Core Web Vitals</span>
+                    <span className="telem-val green">100/100</span>
                   </div>
                 </div>
               </motion.div>
 
-              {/* Floating Engineering Badge */}
+              {/* Bottom Glass Node: Mobile Native Ecosystem */}
               <motion.div 
-                className="floating-tech-chip chip-top"
-                animate={{ y: [0, 6, 0] }}
+                className="floating-glass-card node-mobile"
+                animate={{ y: [0, 8, 0] }}
                 transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
               >
-                <i className="fa-solid fa-bolt" style={{ color: '#F59E0B' }}></i>
-                <span>Fast & SEO Ready</span>
+                <div className="glass-card-header">
+                  <div className="status-live-indicator">
+                    <i className="fa-brands fa-flutter" style={{ color: '#38BDF8' }}></i>
+                    <span>Flutter Native</span>
+                  </div>
+                  <span className="live-metric-tag store">iOS & Android</span>
+                </div>
+                <div className="glass-card-title">Proofile.in & Revolve</div>
+                <div className="glass-badges-row">
+                  <span className="store-pill"><i className="fa-brands fa-apple"></i> App Store</span>
+                  <span className="store-pill"><i className="fa-brands fa-google-play"></i> Google Play</span>
+                  <span className="store-pill live-dot">60 FPS Native</span>
+                </div>
+              </motion.div>
+
+              {/* Atmospheric Floating Badges */}
+              <motion.div 
+                className="orbit-pill orbit-pill-1"
+                animate={{ x: [0, 6, 0], y: [0, -6, 0] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <i className="fa-solid fa-microchip" style={{ color: '#818CF8' }}></i>
+                <span>Autonomous AI Agents</span>
               </motion.div>
 
               <motion.div 
-                className="floating-tech-chip chip-bottom"
-                animate={{ y: [0, -6, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                className="orbit-pill orbit-pill-2"
+                animate={{ x: [0, -6, 0], y: [0, 6, 0] }}
+                transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
               >
-                <i className="fa-brands fa-flutter" style={{ color: '#02569B' }}></i>
-                <span>Cross-Platform Flutter</span>
+                <i className="fa-solid fa-shield-halved" style={{ color: '#34D399' }}></i>
+                <span>Enterprise SOC2 & HIPAA Ready</span>
               </motion.div>
             </div>
           </motion.div>

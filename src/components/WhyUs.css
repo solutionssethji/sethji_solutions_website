@@ -11,7 +11,7 @@
 }
 
 .why-us-card {
-  background: var(--color-bg-card);
+  background: var(--gradient-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   padding: 2.25rem 2rem;
@@ -32,20 +32,20 @@
 .card-icon-wrapper {
   width: 52px;
   height: 52px;
-  background: rgba(79, 140, 255, 0.1);
+  background: rgba(59, 130, 246, 0.08);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1.5rem;
-  border: 1px solid rgba(79, 140, 255, 0.25);
+  border: 1px solid rgba(59, 130, 246, 0.22);
   transition: all 0.3s ease;
 }
 
 .why-us-card:hover .card-icon-wrapper {
   background: var(--gradient-primary);
   border-color: transparent;
-  box-shadow: 0 8px 20px rgba(79, 140, 255, 0.4);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.35);
 }
 
 .card-icon-wrapper i {
